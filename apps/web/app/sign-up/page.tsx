@@ -7,13 +7,13 @@ import { lucia, type LuciaActionResult } from "@anaclumos/web/auth"
 import { redirect } from "next/navigation"
 import { generateIdFromEntropySize } from "lucia"
 import { signUpSchema } from "@anaclumos/web/lib/zod"
-
+import { createHash } from "node:crypto"
 async function signup(formData: FormData): Promise<LuciaActionResult> {
   "use server"
 
   const { email, password, username, fullName } = await signUpSchema.parseAsync(
     {
-      email: formData.get("username"),
+      email: formData.get("email"),
       password: formData.get("password"),
       username: formData.get("username"),
       fullName: formData.get("fullName"),
@@ -35,7 +35,11 @@ async function signup(formData: FormData): Promise<LuciaActionResult> {
       email: email,
       id: userId,
       username: username,
+      name: fullName,
       password_hash: passwordHash,
+      picture: `http://www.gravatar.com/avatar/${createHash("md5")
+        .update(email)
+        .digest("hex")}`,
     },
   })
 

@@ -23,25 +23,6 @@ export default function SignInForm({
           <form className="space-y-6" action={action}>
             <div>
               <Label
-                htmlFor="username"
-                className="block text-sm font-medium text-muted-foreground"
-              >
-                Username
-              </Label>
-              <div className="mt-1">
-                <Input
-                  id="username"
-                  name="username"
-                  type="text"
-                  autoComplete="username"
-                  required
-                  className="block w-full appearance-none rounded-md border border-input bg-background px-3 py-2 shadow-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
-                  placeholder="elon.musk"
-                />
-              </div>
-            </div>
-            <div>
-              <Label
                 htmlFor="email"
                 className="block text-sm font-medium text-muted-foreground"
               >
@@ -56,6 +37,25 @@ export default function SignInForm({
                   required
                   className="block w-full appearance-none rounded-md border border-input bg-background px-3 py-2 shadow-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
                   placeholder="elon@tesla.com"
+                />
+              </div>
+            </div>
+            <div>
+              <Label
+                htmlFor="username"
+                className="block text-sm font-medium text-muted-foreground"
+              >
+                Username
+              </Label>
+              <div className="mt-1">
+                <Input
+                  id="username"
+                  name="username"
+                  type="text"
+                  autoComplete="username"
+                  required
+                  className="block w-full appearance-none rounded-md border border-input bg-background px-3 py-2 shadow-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
+                  placeholder="elon.musk"
                 />
               </div>
             </div>
