@@ -5,6 +5,7 @@ import { Input } from "@anaclumos/design/components/ui/input"
 import { Label } from "@anaclumos/design/components/ui/label"
 import { ErrorToast } from "@anaclumos/design/components/error"
 import type { LuciaActionResult } from "@anaclumos/web/auth"
+import Link from "next/link"
 
 export default async function SignInForm({
   action,
@@ -71,6 +72,20 @@ export default async function SignInForm({
               >
                 {callBackUrl && callBackUrl.length > 0 ? "Continue" : "Sign in"}
               </Button>
+              <div className="mt-4 flex justify-between">
+                <Link
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  href="/sign-up"
+                >
+                  Sign up
+                </Link>
+                <Link
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  href="/forgot-password"
+                >
+                  Forgot password?
+                </Link>
+              </div>
             </div>
           </form>
         </div>
