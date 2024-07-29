@@ -1,0 +1,13 @@
+{
+  "extends": "@anaclumos/ts/react-library.json",
+  "compilerOptions": {
+    "types": ["react/canary"],
+    "baseUrl": ".",
+    "paths": {
+      "@anaclumos/design/*": ["../design/*"],
+      "@anaclumos/ts/*": ["../ts/*"],
+      "@anaclumos/tailwind/*": ["../tailwind/*"],
+      "@anaclumos/storybook": ["../../apps/storybook"]
+    }
+  }
+}

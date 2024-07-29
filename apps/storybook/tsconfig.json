@@ -1,0 +1,3 @@
+{
+  "extends": "@anaclumos/ts/storybook.json"
+}

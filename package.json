@@ -1,0 +1,25 @@
+{
+  "name": "@anaclumos/engine",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "biome lint", 
+    "format": "biome format",
+    "test": "turbo test",
+    "clean": "turbo clean",
+    "start": "turbo start"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "turbo": "^2.0.9",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "@anaclumoss": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "lefthook": "^1.7.4"
+  }
+}

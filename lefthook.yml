@@ -1,0 +1,12 @@
+pre-push:
+  commands:
+    Packages Audit:
+      run: pnpm audit
+
+pre-commit:
+  parallel: true
+  commands:
+    JavaScript Style Check:
+      run: pnpm format
+    JavaScript Lint:
+      run: pnpm lint

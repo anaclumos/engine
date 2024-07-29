@@ -1,0 +1,21 @@
+{
+  "extends": "@anaclumos/ts/nextjs.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@anaclumos/design/*": ["../../packages/design/*"],
+      "@anaclumos/ts/*": ["../../packages/typescript/*"],
+      "@anaclumos/tailwind/*": ["../../packages/tailwind/*"],
+      "@anaclumos/web/*": ["./*"],
+      "@anaclumos/storybook/*": ["../storybook/*"]
+    },
+    "jsx": "preserve"
+  },
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}
